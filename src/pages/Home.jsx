@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { useAppContext } from "../context/Appcontext";
+import Todos from "../components/Todos";
 
 function Home() {
   const { user, setUser } = useAppContext();
@@ -29,8 +30,13 @@ function Home() {
   return (
     <div>
       <header>
-        <button onClick={handelLogout}>logout</button>
+        <h1>Todo</h1>
+        <div className="btn">
+          <button onClick={handelLogout}>logout</button>
+          <span>{user}</span>
+        </div>
       </header>
+      <Todos />
     </div>
   );
 }

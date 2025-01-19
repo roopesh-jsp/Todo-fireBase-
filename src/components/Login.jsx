@@ -26,7 +26,7 @@ function Login() {
     }
   }, []);
   return (
-    <div>
+    <div className="login">
       <button onClick={handelMailLogin}>sigin with google</button>
     </div>
   );
